@@ -22,7 +22,7 @@ const charteredAccountants = require('./db.json');
 app.get('/', (req, res) => {
 	res.send(
         // 'find partners is running...'
-        charteredAccountants[1]
+        charteredAccountants
     );
 });
 app.listen(port, () => {
