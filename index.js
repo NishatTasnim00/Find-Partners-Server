@@ -15,6 +15,12 @@ app.get("/", (req, res) => {
 app.get("/charteredAccountants", (req, res) => {
     res.send(charteredAccountants);
   });
+  app.get('/charteredAccountants/:id', (req, res) => {
+    const id = req.query._id; 
+    const result = data.find(item => item.id === id);
+    res.send(result)
+  })
+
 app.listen(port, () => {
   console.log("find partners is running...");
 });
