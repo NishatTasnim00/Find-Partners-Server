@@ -16,8 +16,8 @@ app.get("/charteredAccountants", (req, res) => {
     res.send(charteredAccountants);
   });
   app.get('/charteredAccountants/:id', (req, res) => {
-    const id = req.query._id; 
-    const result = data.find(item => item.id === id);
+    const id = parseInt(req.params.id);
+    const result = charteredAccountants.find(item => item.id === id);
     res.send(result)
   })
 
