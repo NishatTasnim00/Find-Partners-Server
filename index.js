@@ -12,6 +12,9 @@ const charteredAccountants = require("./db.json");
 app.get("/", (req, res) => {
   res.send("find partners is running...");
 });
+app.get("/charteredAccountants", (req, res) => {
+    res.send(charteredAccountants);
+  });
 app.listen(port, () => {
   console.log("find partners is running...");
 });
